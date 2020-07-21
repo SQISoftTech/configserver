@@ -19,8 +19,8 @@ fi
 echo "> copy $BUILD_PATH >> $CP_JAR_PATH"
 sudo cp $BUILD_PATH $CP_JAR_PATH
 
-echo "> cd $DOCKER_PATH"
 DOCKER_PATH=/home/ec2-user/docker/
+echo "> cd $DOCKER_PATH"
 cd $DOCKER_PATH
 
 SHELL_PATH=`pwd`
