@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: CONFIG-SERVER
+  profiles:
+    active: default
+  cloud:
+    config:
+      server:
+        git:
+          uri:  https://github.com/SQISoftTech/Config_repo
+          username: SQISoftTech
+          password: sqisoft74307@H
+
+server:
+  port: 9030

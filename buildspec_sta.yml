@@ -1,0 +1,26 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: openjdk8
+  build:
+    commands:
+      - echo [PHASE] Entered the build phase...
+      - gradle bootjar
+  post_build:
+    commands:
+      - echo [PHASE] Entered the post_build phase...
+      - echo $(basename ./build/libs/*.jar)
+      - ls -al
+      - chmod +x scripts/deploy.sh
+artifacts:
+  files:
+    - appspec.yml
+    - build/libs/*.jar
+    - scripts/**
+  discard-paths: yes
+
+cache:
+  paths:
+    - '/root/.gradle/caches/**/*'
