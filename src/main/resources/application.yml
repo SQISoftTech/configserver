@@ -1,6 +1,15 @@
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URL:http://localhost:9020/eureka/}
+    register-with-eureka: true
+    fetch-registry: true
+
+---
 spring:
-  profiles:
-    active: local
+  profiles: local
 
 eureka:
   instance:
@@ -12,10 +21,8 @@ eureka:
     fetch-registry: true
 
 ---
-
 spring:
-  profiles:
-    active: sta
+  profiles: sta
 
 eureka:
   instance:
@@ -25,4 +32,3 @@ eureka:
       defaultZone: ${EUREKA_URL:http://eureka:9020/eureka/}
     register-with-eureka: true
     fetch-registry: true
-
