@@ -1,9 +1,5 @@
-
 version: 0.0
 os: linux
-spring:
-  profiles: sta
-
 files:
   - source:  /
     destination: /home/ec2-user/build/config/
@@ -17,28 +13,5 @@ permissions:
 hooks:
   AfterInstall:
     - location: deploy.sh
-      timeout: 60
-      runas: ec2-user
-
-
----
-spring:
-  profiles: dev
-
-version: 0.0
-os: linux
-files:
-  - source:  /
-    destination: /usr/share/api_server/
-
-permissions:
-  - object: /
-    pattern: "**"
-    owner: ec2-user
-    group: ec2-user
-
-hooks:
-  AfterInstall:
-    - location: deploy_dev.sh
       timeout: 60
       runas: ec2-user
