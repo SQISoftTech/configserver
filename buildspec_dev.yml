@@ -16,7 +16,7 @@ phases:
       - chmod +x scripts/deploy_dev.sh
 artifacts:
   files:
-    - appspec.yml
+    - deploy/dev/appspec.yml
     - build/libs/*.jar
     - scripts/**
   discard-paths: yes
