@@ -12,8 +12,8 @@ phases:
     commands:
       - echo [PHASE] Entered the post_build phase...
       - echo $(basename ./build/libs/*.jar)
-      - mv deploy/op/appspec.yml appspec.yml
       - ls -al
+      - mv deploy/op/appspec.yml appspec.yml
       - chmod +x scripts/deploy_op.sh
 artifacts:
   files:
