@@ -6,7 +6,7 @@
 #
 JAVA_HOME=/usr/lib/jvm/jre
 SERVICE_NAME=configserver
-PATH_TO_JAR=/usr/share/api_server/configserver/configserver-0.0.1-SNAPSHOT.jar
+PATH_TO_JAR=/home/ec2-user/build/configserver/configserver-0.0.1-SNAPSHOT.jar
 PID_PATH_NAME=/tmp/configserver-pid
 JAVA_OPTS="-server -Dspring.profiles.active=dev"
 PATH=$PATH:JAVA_HOME/bin

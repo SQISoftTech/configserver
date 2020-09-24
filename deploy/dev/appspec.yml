@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source:  /
-    destination: /usr/share/api_server/configserver/
+    destination: /home/ec2-user/build/configserver/
 
 permissions:
   - object: /
